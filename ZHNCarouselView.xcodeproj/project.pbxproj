@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD033AAB1CEEB0B1009A5333 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AAA1CEEB0B1009A5333 /* main.m */; };
+		CD033AAE1CEEB0B1009A5333 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */; };
+		CD033AB11CEEB0B1009A5333 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AB01CEEB0B1009A5333 /* ViewController.m */; };
+		CD033AB41CEEB0B1009A5333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD033AB21CEEB0B1009A5333 /* Main.storyboard */; };
+		CD033AB61CEEB0B1009A5333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD033AB51CEEB0B1009A5333 /* Assets.xcassets */; };
+		CD033AB91CEEB0B1009A5333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD033AB71CEEB0B1009A5333 /* LaunchScreen.storyboard */; };
+		CD033AC41CEEB0B1009A5333 /* ZHNCarouselViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AC31CEEB0B1009A5333 /* ZHNCarouselViewTests.m */; };
+		CD033ACF1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033ACE1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD033AC01CEEB0B1009A5333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD033A9E1CEEB0B1009A5333 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD033AA51CEEB0B1009A5333;
+			remoteInfo = ZHNCarouselView;
+		};
+		CD033ACB1CEEB0B1009A5333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD033A9E1CEEB0B1009A5333 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD033AA51CEEB0B1009A5333;
+			remoteInfo = ZHNCarouselView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD033AA61CEEB0B1009A5333 /* ZHNCarouselView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHNCarouselView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD033AAA1CEEB0B1009A5333 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD033AAC1CEEB0B1009A5333 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD033AAF1CEEB0B1009A5333 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD033AB01CEEB0B1009A5333 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD033AB31CEEB0B1009A5333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD033AB51CEEB0B1009A5333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD033AB81CEEB0B1009A5333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD033ABA1CEEB0B1009A5333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD033ABF1CEEB0B1009A5333 /* ZHNCarouselViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHNCarouselViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD033AC31CEEB0B1009A5333 /* ZHNCarouselViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNCarouselViewTests.m; sourceTree = "<group>"; };
+		CD033AC51CEEB0B1009A5333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD033ACA1CEEB0B1009A5333 /* ZHNCarouselViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHNCarouselViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD033ACE1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNCarouselViewUITests.m; sourceTree = "<group>"; };
+		CD033AD01CEEB0B1009A5333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD033AA31CEEB0B1009A5333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033ABC1CEEB0B1009A5333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033AC71CEEB0B1009A5333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD033A9D1CEEB0B1009A5333 = {
+			isa = PBXGroup;
+			children = (
+				CD033AA81CEEB0B1009A5333 /* ZHNCarouselView */,
+				CD033AC21CEEB0B1009A5333 /* ZHNCarouselViewTests */,
+				CD033ACD1CEEB0B1009A5333 /* ZHNCarouselViewUITests */,
+				CD033AA71CEEB0B1009A5333 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD033AA71CEEB0B1009A5333 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD033AA61CEEB0B1009A5333 /* ZHNCarouselView.app */,
+				CD033ABF1CEEB0B1009A5333 /* ZHNCarouselViewTests.xctest */,
+				CD033ACA1CEEB0B1009A5333 /* ZHNCarouselViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD033AA81CEEB0B1009A5333 /* ZHNCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				CD033AAC1CEEB0B1009A5333 /* AppDelegate.h */,
+				CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */,
+				CD033AAF1CEEB0B1009A5333 /* ViewController.h */,
+				CD033AB01CEEB0B1009A5333 /* ViewController.m */,
+				CD033AB21CEEB0B1009A5333 /* Main.storyboard */,
+				CD033AB51CEEB0B1009A5333 /* Assets.xcassets */,
+				CD033AB71CEEB0B1009A5333 /* LaunchScreen.storyboard */,
+				CD033ABA1CEEB0B1009A5333 /* Info.plist */,
+				CD033AA91CEEB0B1009A5333 /* Supporting Files */,
+			);
+			path = ZHNCarouselView;
+			sourceTree = "<group>";
+		};
+		CD033AA91CEEB0B1009A5333 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD033AAA1CEEB0B1009A5333 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD033AC21CEEB0B1009A5333 /* ZHNCarouselViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD033AC31CEEB0B1009A5333 /* ZHNCarouselViewTests.m */,
+				CD033AC51CEEB0B1009A5333 /* Info.plist */,
+			);
+			path = ZHNCarouselViewTests;
+			sourceTree = "<group>";
+		};
+		CD033ACD1CEEB0B1009A5333 /* ZHNCarouselViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD033ACE1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m */,
+				CD033AD01CEEB0B1009A5333 /* Info.plist */,
+			);
+			path = ZHNCarouselViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD033AA51CEEB0B1009A5333 /* ZHNCarouselView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD033AD31CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselView" */;
+			buildPhases = (
+				CD033AA21CEEB0B1009A5333 /* Sources */,
+				CD033AA31CEEB0B1009A5333 /* Frameworks */,
+				CD033AA41CEEB0B1009A5333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHNCarouselView;
+			productName = ZHNCarouselView;
+			productReference = CD033AA61CEEB0B1009A5333 /* ZHNCarouselView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD033ABE1CEEB0B1009A5333 /* ZHNCarouselViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD033AD61CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewTests" */;
+			buildPhases = (
+				CD033ABB1CEEB0B1009A5333 /* Sources */,
+				CD033ABC1CEEB0B1009A5333 /* Frameworks */,
+				CD033ABD1CEEB0B1009A5333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD033AC11CEEB0B1009A5333 /* PBXTargetDependency */,
+			);
+			name = ZHNCarouselViewTests;
+			productName = ZHNCarouselViewTests;
+			productReference = CD033ABF1CEEB0B1009A5333 /* ZHNCarouselViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD033AC91CEEB0B1009A5333 /* ZHNCarouselViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD033AD91CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewUITests" */;
+			buildPhases = (
+				CD033AC61CEEB0B1009A5333 /* Sources */,
+				CD033AC71CEEB0B1009A5333 /* Frameworks */,
+				CD033AC81CEEB0B1009A5333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD033ACC1CEEB0B1009A5333 /* PBXTargetDependency */,
+			);
+			name = ZHNCarouselViewUITests;
+			productName = ZHNCarouselViewUITests;
+			productReference = CD033ACA1CEEB0B1009A5333 /* ZHNCarouselViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD033A9E1CEEB0B1009A5333 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = zhn;
+				TargetAttributes = {
+					CD033AA51CEEB0B1009A5333 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					CD033ABE1CEEB0B1009A5333 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CD033AA51CEEB0B1009A5333;
+					};
+					CD033AC91CEEB0B1009A5333 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CD033AA51CEEB0B1009A5333;
+					};
+				};
+			};
+			buildConfigurationList = CD033AA11CEEB0B1009A5333 /* Build configuration list for PBXProject "ZHNCarouselView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD033A9D1CEEB0B1009A5333;
+			productRefGroup = CD033AA71CEEB0B1009A5333 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD033AA51CEEB0B1009A5333 /* ZHNCarouselView */,
+				CD033ABE1CEEB0B1009A5333 /* ZHNCarouselViewTests */,
+				CD033AC91CEEB0B1009A5333 /* ZHNCarouselViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD033AA41CEEB0B1009A5333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD033AB91CEEB0B1009A5333 /* LaunchScreen.storyboard in Resources */,
+				CD033AB61CEEB0B1009A5333 /* Assets.xcassets in Resources */,
+				CD033AB41CEEB0B1009A5333 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033ABD1CEEB0B1009A5333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033AC81CEEB0B1009A5333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD033AA21CEEB0B1009A5333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD033AB11CEEB0B1009A5333 /* ViewController.m in Sources */,
+				CD033AAE1CEEB0B1009A5333 /* AppDelegate.m in Sources */,
+				CD033AAB1CEEB0B1009A5333 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033ABB1CEEB0B1009A5333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD033AC41CEEB0B1009A5333 /* ZHNCarouselViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD033AC61CEEB0B1009A5333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD033ACF1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD033AC11CEEB0B1009A5333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD033AA51CEEB0B1009A5333 /* ZHNCarouselView */;
+			targetProxy = CD033AC01CEEB0B1009A5333 /* PBXContainerItemProxy */;
+		};
+		CD033ACC1CEEB0B1009A5333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD033AA51CEEB0B1009A5333 /* ZHNCarouselView */;
+			targetProxy = CD033ACB1CEEB0B1009A5333 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD033AB21CEEB0B1009A5333 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD033AB31CEEB0B1009A5333 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD033AB71CEEB0B1009A5333 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD033AB81CEEB0B1009A5333 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD033AD11CEEB0B1009A5333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD033AD21CEEB0B1009A5333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD033AD41CEEB0B1009A5333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZHNCarouselView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD033AD51CEEB0B1009A5333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZHNCarouselView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD033AD71CEEB0B1009A5333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHNCarouselViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHNCarouselView.app/ZHNCarouselView";
+			};
+			name = Debug;
+		};
+		CD033AD81CEEB0B1009A5333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHNCarouselViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHNCarouselView.app/ZHNCarouselView";
+			};
+			name = Release;
+		};
+		CD033ADA1CEEB0B1009A5333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHNCarouselViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZHNCarouselView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CD033ADB1CEEB0B1009A5333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHNCarouselViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhn.ZHNCarouselViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZHNCarouselView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD033AA11CEEB0B1009A5333 /* Build configuration list for PBXProject "ZHNCarouselView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD033AD11CEEB0B1009A5333 /* Debug */,
+				CD033AD21CEEB0B1009A5333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD033AD31CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD033AD41CEEB0B1009A5333 /* Debug */,
+				CD033AD51CEEB0B1009A5333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD033AD61CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD033AD71CEEB0B1009A5333 /* Debug */,
+				CD033AD81CEEB0B1009A5333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD033AD91CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD033ADA1CEEB0B1009A5333 /* Debug */,
+				CD033ADB1CEEB0B1009A5333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD033A9E1CEEB0B1009A5333 /* Project object */;
+}
