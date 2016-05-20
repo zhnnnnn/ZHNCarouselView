@@ -15,6 +15,14 @@
 		CD033AB91CEEB0B1009A5333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD033AB71CEEB0B1009A5333 /* LaunchScreen.storyboard */; };
 		CD033AC41CEEB0B1009A5333 /* ZHNCarouselViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AC31CEEB0B1009A5333 /* ZHNCarouselViewTests.m */; };
 		CD033ACF1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033ACE1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m */; };
+		CD033AEC1CEEB10F009A5333 /* UIImageView+ZHNimage.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033ADF1CEEB10F009A5333 /* UIImageView+ZHNimage.m */; };
+		CD033AED1CEEB10F009A5333 /* UIImageView+ZHNimageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE11CEEB10F009A5333 /* UIImageView+ZHNimageCache.m */; };
+		CD033AEE1CEEB10F009A5333 /* ZHNdiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE31CEEB10F009A5333 /* ZHNdiskCache.m */; };
+		CD033AEF1CEEB10F009A5333 /* ZHNimageDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE51CEEB10F009A5333 /* ZHNimageDownLoader.m */; };
+		CD033AF01CEEB10F009A5333 /* ZHNmemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE71CEEB10F009A5333 /* ZHNmemoryCache.m */; };
+		CD033AF11CEEB10F009A5333 /* ZHNwebImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE91CEEB10F009A5333 /* ZHNwebImageCache.m */; };
+		CD033AF21CEEB10F009A5333 /* ZHNwebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AEB1CEEB10F009A5333 /* ZHNwebImageOperation.m */; };
+		CD5E35591CEF021200E4653F /* ZHNcarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5E35581CEF021200E4653F /* ZHNcarouselView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,22 @@
 		CD033ACA1CEEB0B1009A5333 /* ZHNCarouselViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHNCarouselViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD033ACE1CEEB0B1009A5333 /* ZHNCarouselViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNCarouselViewUITests.m; sourceTree = "<group>"; };
 		CD033AD01CEEB0B1009A5333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD033ADE1CEEB10F009A5333 /* UIImageView+ZHNimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZHNimage.h"; sourceTree = "<group>"; };
+		CD033ADF1CEEB10F009A5333 /* UIImageView+ZHNimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZHNimage.m"; sourceTree = "<group>"; };
+		CD033AE01CEEB10F009A5333 /* UIImageView+ZHNimageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZHNimageCache.h"; sourceTree = "<group>"; };
+		CD033AE11CEEB10F009A5333 /* UIImageView+ZHNimageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZHNimageCache.m"; sourceTree = "<group>"; };
+		CD033AE21CEEB10F009A5333 /* ZHNdiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNdiskCache.h; sourceTree = "<group>"; };
+		CD033AE31CEEB10F009A5333 /* ZHNdiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNdiskCache.m; sourceTree = "<group>"; };
+		CD033AE41CEEB10F009A5333 /* ZHNimageDownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNimageDownLoader.h; sourceTree = "<group>"; };
+		CD033AE51CEEB10F009A5333 /* ZHNimageDownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNimageDownLoader.m; sourceTree = "<group>"; };
+		CD033AE61CEEB10F009A5333 /* ZHNmemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNmemoryCache.h; sourceTree = "<group>"; };
+		CD033AE71CEEB10F009A5333 /* ZHNmemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNmemoryCache.m; sourceTree = "<group>"; };
+		CD033AE81CEEB10F009A5333 /* ZHNwebImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNwebImageCache.h; sourceTree = "<group>"; };
+		CD033AE91CEEB10F009A5333 /* ZHNwebImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNwebImageCache.m; sourceTree = "<group>"; };
+		CD033AEA1CEEB10F009A5333 /* ZHNwebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNwebImageOperation.h; sourceTree = "<group>"; };
+		CD033AEB1CEEB10F009A5333 /* ZHNwebImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNwebImageOperation.m; sourceTree = "<group>"; };
+		CD5E35571CEF021200E4653F /* ZHNcarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNcarouselView.h; sourceTree = "<group>"; };
+		CD5E35581CEF021200E4653F /* ZHNcarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNcarouselView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +125,8 @@
 		CD033AA81CEEB0B1009A5333 /* ZHNCarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				CD033ADD1CEEB10F009A5333 /* zhncustomWebImage */,
+				CD033ADC1CEEB0BD009A5333 /* ZHNCarouselView */,
 				CD033AAC1CEEB0B1009A5333 /* AppDelegate.h */,
 				CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */,
 				CD033AAF1CEEB0B1009A5333 /* ViewController.h */,
@@ -138,6 +164,36 @@
 				CD033AD01CEEB0B1009A5333 /* Info.plist */,
 			);
 			path = ZHNCarouselViewUITests;
+			sourceTree = "<group>";
+		};
+		CD033ADC1CEEB0BD009A5333 /* ZHNCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ZHNCarouselView;
+			sourceTree = "<group>";
+		};
+		CD033ADD1CEEB10F009A5333 /* zhncustomWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				CD033ADE1CEEB10F009A5333 /* UIImageView+ZHNimage.h */,
+				CD033ADF1CEEB10F009A5333 /* UIImageView+ZHNimage.m */,
+				CD033AE01CEEB10F009A5333 /* UIImageView+ZHNimageCache.h */,
+				CD033AE11CEEB10F009A5333 /* UIImageView+ZHNimageCache.m */,
+				CD033AE41CEEB10F009A5333 /* ZHNimageDownLoader.h */,
+				CD033AE51CEEB10F009A5333 /* ZHNimageDownLoader.m */,
+				CD033AE21CEEB10F009A5333 /* ZHNdiskCache.h */,
+				CD033AE31CEEB10F009A5333 /* ZHNdiskCache.m */,
+				CD033AE61CEEB10F009A5333 /* ZHNmemoryCache.h */,
+				CD033AE71CEEB10F009A5333 /* ZHNmemoryCache.m */,
+				CD033AE81CEEB10F009A5333 /* ZHNwebImageCache.h */,
+				CD033AE91CEEB10F009A5333 /* ZHNwebImageCache.m */,
+				CD033AEA1CEEB10F009A5333 /* ZHNwebImageOperation.h */,
+				CD033AEB1CEEB10F009A5333 /* ZHNwebImageOperation.m */,
+				CD5E35571CEF021200E4653F /* ZHNcarouselView.h */,
+				CD5E35581CEF021200E4653F /* ZHNcarouselView.m */,
+			);
+			path = zhncustomWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD033AF01CEEB10F009A5333 /* ZHNmemoryCache.m in Sources */,
+				CD033AEF1CEEB10F009A5333 /* ZHNimageDownLoader.m in Sources */,
 				CD033AB11CEEB0B1009A5333 /* ViewController.m in Sources */,
+				CD033AF21CEEB10F009A5333 /* ZHNwebImageOperation.m in Sources */,
 				CD033AAE1CEEB0B1009A5333 /* AppDelegate.m in Sources */,
+				CD033AED1CEEB10F009A5333 /* UIImageView+ZHNimageCache.m in Sources */,
 				CD033AAB1CEEB0B1009A5333 /* main.m in Sources */,
+				CD033AF11CEEB10F009A5333 /* ZHNwebImageCache.m in Sources */,
+				CD5E35591CEF021200E4653F /* ZHNcarouselView.m in Sources */,
+				CD033AEE1CEEB10F009A5333 /* ZHNdiskCache.m in Sources */,
+				CD033AEC1CEEB10F009A5333 /* UIImageView+ZHNimage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +560,7 @@
 				CD033AD51CEEB0B1009A5333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD033AD61CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +569,7 @@
 				CD033AD81CEEB0B1009A5333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD033AD91CEEB0B1009A5333 /* Build configuration list for PBXNativeTarget "ZHNCarouselViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +578,7 @@
 				CD033ADB1CEEB0B1009A5333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
