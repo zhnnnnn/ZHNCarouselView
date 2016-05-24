@@ -71,6 +71,17 @@
     _timeIvatel = timeIvatel;
     [self addTimer];
 }
+
+- (void)setPageControlNormalColor:(UIColor *)pageControlNormalColor{
+    _pageControlNormalColor = pageControlNormalColor;
+    self.pageControl.pageIndicatorTintColor = pageControlNormalColor;
+}
+
+- (void)setPageControlSelectColor:(UIColor *)pageControlSelectColor{
+    _pageControlSelectColor = pageControlSelectColor;
+    self.pageControl.currentPageIndicatorTintColor = pageControlSelectColor;
+}
+
 - (void)setZhnPageControlMode:(pageControlMode)zhnPageControlMode{
     _zhnPageControlMode = zhnPageControlMode;
     self.pageControl.numberOfPages = self.imageArray.count;
