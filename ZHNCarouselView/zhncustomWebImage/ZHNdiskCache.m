@@ -52,14 +52,26 @@
     });
 }
 
-- (UIImage *)zhnDiskCache_getImageWithKey:(NSString *)key{
+- (void)zhnDiskCache_GetImageWithBlock:(getImageBlock)block key:(NSString *)key{
+    
     NSString * filePath = [self.disCachePath stringByAppendingPathComponent:key];
     __block UIImage * cacheimage;
-    dispatch_sync(self.setGetImageQueue, ^{
+    dispatch_async(self.setGetImageQueue, ^{
         NSData * imageData = [NSData dataWithContentsOfFile:filePath];
         cacheimage = [UIImage imageWithData:imageData];
+        block(cacheimage);
     });
-    return  cacheimage ;
+}
+
+
+- (UIImage *)zhnDiskCache_getImageWithKey:(NSString *)key{
+
+    NSString * filePath = [self.disCachePath stringByAppendingPathComponent:key];    
+    UIImage * cacheimage;
+    NSData * imageData = [NSData dataWithContentsOfFile:filePath];
+    cacheimage = [UIImage imageWithData:imageData];
+    
+    return  cacheimage;
 }
 
 - (BOOL)zhnDiskCache_ContainsImageWithKey:(NSString *)key{

@@ -21,7 +21,7 @@ typedef void (^ZHNimageDownLoadProgressBlock)(unsigned long long total,unsigned 
  *
  *  @return 对象
  */
-- (instancetype)initWithRequest:(NSURLRequest *)request progress:(ZHNimageDownLoadProgressBlock)progress completion:(ZHNimageDownLoadCallBackBlock)completion;
+- (instancetype)initWithRequest:(NSURLRequest *)request fullKey:(NSString *)fullkey progress:(ZHNimageDownLoadProgressBlock)progress completion:(ZHNimageDownLoadCallBackBlock)completion;
 /**
  *  取消当前imageview的图片下载
  */

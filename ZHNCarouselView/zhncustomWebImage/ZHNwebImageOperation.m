@@ -8,6 +8,8 @@
 
 #import "ZHNwebImageOperation.h"
 #import "ZHNimageDownLoader.h"
+#import "ZHNwebImageCache.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @interface ZHNwebImageOperation()<NSURLSessionDownloadDelegate>{
     BOOL        executing;  // 执行中
@@ -21,11 +23,12 @@
 @property (nonatomic, copy) ZHNimageDownLoadProgressBlock progressBlock;
 @property (nonatomic, copy) ZHNimageDownLoadCallBackBlock callbackOnFinished;
 
+@property (nonatomic,strong) UIImage * cacheImage;
 @end
 
 @implementation ZHNwebImageOperation
 
-- (instancetype)initWithRequest:(NSURLRequest *)request progress:(ZHNimageDownLoadProgressBlock)progress completion:(ZHNimageDownLoadCallBackBlock)completion{
+- (instancetype)initWithRequest:(NSURLRequest *)request fullKey:(NSString *)fullkey progress:(ZHNimageDownLoadProgressBlock)progress completion:(ZHNimageDownLoadCallBackBlock)completion{
 
     if (self = [super init]) {
         
@@ -38,6 +41,8 @@
         self.callbackOnFinished = completion;
         executing = NO;
         finished = NO;
+        
+       
     }
     return self;
 }
@@ -51,6 +56,8 @@
         [self didChangeValueForKey:@"isFinished"];
         return;
     }
+    
+    [self.downLoadTask resume];
     
     [self willChangeValueForKey:@"isExecuting"];
     [NSThread detachNewThreadSelector:@selector(main) toTarget:self withObject:nil];
@@ -95,8 +102,8 @@
 
 
 - (void)cancelDownLoad{
-    [self cancel];
     [self.downLoadTask cancel];
+    [self cancel];
 }
 
 
@@ -105,7 +112,6 @@
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location {
     NSData *data = [NSData dataWithContentsOfURL:location];
-    
     if (self.progressBlock) {
         self.progressBlock(self.totalLength, self.currentLength);
     }
@@ -120,10 +126,10 @@ didFinishDownloadingToURL:(NSURL *)location {
 
 // 下载过程
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-
+    
     self.currentLength = totalBytesWritten;
     self.totalLength = totalBytesExpectedToWrite;
-    
+
     if (self.progressBlock) {
         self.progressBlock(self.totalLength, self.currentLength);
     }
@@ -136,7 +142,6 @@ didFinishDownloadingToURL:(NSURL *)location {
         if (self.callbackOnFinished) {
             self.callbackOnFinished(nil, error);
         }
-        
         self.callbackOnFinished = nil;
     }
 }

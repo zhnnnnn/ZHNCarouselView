@@ -20,13 +20,15 @@
         _memoryCache = [[NSCache alloc]init];
         _memoryCache.name = @"tempWebCache";
         _memoryCache.countLimit = 100;
-        _memoryCache.totalCostLimit = 1024 * 1024 * 30;
+        _memoryCache.totalCostLimit = 1024 * 1024 * 50;
     }
     return self;
 }
 
 - (void)zhnMemoryCache_setImage:(UIImage *)image withKey:(NSString *)key{
-    [self.memoryCache setObject:image forKey:key];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+         [self.memoryCache setObject:image forKey:key];
+    });
 }
 - (UIImage *)zhnMemoryCache_getImageWithKey:(NSString *)key{
     return [self.memoryCache objectForKey:key];

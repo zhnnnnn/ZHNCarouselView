@@ -131,7 +131,7 @@
 
 #pragma mark - 存取方法
 - (void)zhnWebImageCache_setImage:(UIImage *)image key:(NSString *)key{
-    
+
     [self zhnWebImageCache_setImage:image imageData:nil key:key];
 }
 
@@ -155,12 +155,13 @@
 }
 
 - (UIImage *)zhnWebImageCache_getImageWithKey:(NSString *)key{
-
+    
     UIImage * memoryImage = [self.memoryCache zhnMemoryCache_getImageWithKey:key];
     if (memoryImage) {
         return memoryImage;
     }
     else if([self.disCache zhnDiskCache_getImageWithKey:key]){
+     
         [self.memoryCache zhnMemoryCache_setImage:[self.disCache zhnDiskCache_getImageWithKey:key] withKey:key];
         
         return [self.disCache zhnDiskCache_getImageWithKey:key];

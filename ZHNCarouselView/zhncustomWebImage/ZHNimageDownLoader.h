@@ -29,5 +29,5 @@ typedef void (^ZHNimageDownLoadProgressBlock)(unsigned long long total,unsigned 
  *  @param progress 成功的回调
  *  @param finished 失败的回调
  */
-- (ZHNwebImageOperation *)startDownLoadImageWithUrl:(NSString *)url imageviewObject:(UIImageView *)object progress:(ZHNimageDownLoadProgressBlock)progress finished:(ZHNimageDownLoadCallBackBlock)finished;
+- (ZHNwebImageOperation *)startDownLoadImageWithUrl:(NSString *)url fullKey:(NSString *)fullkey imageviewObject:(UIImageView *)object progress:(ZHNimageDownLoadProgressBlock)progress finished:(ZHNimageDownLoadCallBackBlock)finished;
 @end

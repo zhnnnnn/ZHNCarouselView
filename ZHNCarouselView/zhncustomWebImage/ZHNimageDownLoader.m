@@ -42,17 +42,18 @@
     return self.webImageOperationQueue;
 }
 
-- (ZHNwebImageOperation *)startDownLoadImageWithUrl:(NSString *)url imageviewObject:(UIImageView *)object progress:(ZHNimageDownLoadProgressBlock)progress finished:(ZHNimageDownLoadCallBackBlock)finished{
+- (ZHNwebImageOperation *)startDownLoadImageWithUrl:(NSString *)url fullKey:(NSString *)fullkey imageviewObject:(UIImageView *)object progress:(ZHNimageDownLoadProgressBlock)progress finished:(ZHNimageDownLoadCallBackBlock)finished{
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                                                            cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                        timeoutInterval:60];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
-    
-    ZHNwebImageOperation * imageOperation = [[ZHNwebImageOperation alloc]initWithRequest:request progress:progress completion:finished];
+    ZHNwebImageOperation * imageOperation = [[ZHNwebImageOperation alloc]initWithRequest:request fullKey:fullkey progress:progress completion:finished];
     [self.webImageOperationQueue addOperation:imageOperation];
     return imageOperation;
 }
+
+
 
 
 

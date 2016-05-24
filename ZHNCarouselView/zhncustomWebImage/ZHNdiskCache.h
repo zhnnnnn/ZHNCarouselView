@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+typedef void(^getImageBlock)(UIImage *);
+
 @interface ZHNdiskCache : NSObject
 - (instancetype)initWithName:(NSString *)name;
 /**
@@ -17,6 +20,13 @@
  *  @param key   键值
  */
 - (void)zhnDiskCache_saveImage:(UIImage *)image imageData:(NSData *)downLoadImageData key:(NSString *)key;
+/**
+ *  拿到图片
+ *
+ *  @param block 异步加载的block
+ *  @param key   key
+ */
+- (void)zhnDiskCache_GetImageWithBlock:(getImageBlock)block key:(NSString *)key;
 /**
  *  从cache里拿到图片
  *

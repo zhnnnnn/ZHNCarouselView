@@ -15,6 +15,8 @@
 #import "ZHNwebImageOperation.h"
 #import <objc/runtime.h>
 
+static NSMutableDictionary * faildUrls;
+
 @implementation UIImageView (ZHNimageCache)
 #pragma mark set get 方法
 - (ZHNwebImageOperation *)currentImageOperation{
@@ -40,50 +42,66 @@
 
 
 - (void)zhn_setImageWithUrl:(NSString *)url withContentMode:(ZHN_contentMode)mode needDefaultImage:(BOOL)needDefaultImage placeHolder:(UIImage *)placeHolder{
+    
     // 取消当前imageview的下载任务
     [self.currentImageOperation cancelDownLoad];
-   
+    
     if (placeHolder) {
         dispatch_async(dispatch_get_main_queue(), ^{
-             self.image = placeHolder;
+            self.image = placeHolder;
         });
     }
+    if (faildUrls == nil) {//
+        faildUrls = [NSMutableDictionary dictionary];
+    }
+    if(faildUrls[url]){
+        return;
+    }
+    
     if(url.length == 0){
         return;
     }
-    NSString * fullKey = [NSString stringWithFormat:@"%@%f%f%lu",[self cachedFileNameForKey:url],self.frame.size.width,self.frame.size.height,mode];
     
+    NSString * fullKey = [NSString stringWithFormat:@"%@%f%f%lu",[self cachedFileNameForKey:url],self.frame.size.width,self.frame.size.height,mode];
+   
     if (mode == ZHN_contentModeDefault) {
         fullKey = url;
     }
     UIImage * currentImage = [[ZHNwebImageCache shareInstance]zhnWebImageCache_getImageWithKey:fullKey];
     if (currentImage) {
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             self.image = currentImage;
         });
         return;
     }
     
-   ZHNwebImageOperation * imageOperation = [[ZHNimageDownLoader shareInstace] startDownLoadImageWithUrl:url imageviewObject:self progress:nil finished:^(NSData *data, NSError *error) {
+    
+    
+   ZHNwebImageOperation * imageOperation = [[ZHNimageDownLoader shareInstace] startDownLoadImageWithUrl:url fullKey:fullKey imageviewObject:self progress:nil finished:^(NSData *data, NSError *error) {
        
-       if (error) {
+       if (error || data == nil) {
            NSLog(@"%@",error);
            return;
        }
+       
+       UIImage * currentImage = [UIImage imageWithData:data];
+       if (!currentImage) {
+           [faildUrls setObject:@"faild" forKey:url];
+           return;
+       }
+     
         // 需要默认的图片的情况
         if (needDefaultImage) {
             [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:nil imageData:data key:url];
         }
-        if (mode == ZHN_contentModeDefault) {
+        if (mode == ZHN_contentModeDefault) { // 默认的显示
              [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:nil imageData:data key:url];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.image = [UIImage imageWithData:data];
             });
-        }else{
+        }else{// 特殊的显示
             
             self.scaleImageBlock = ^(UIImage * scaleImage){
-                
                  [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:scaleImage key:fullKey];
             };
             
@@ -96,8 +114,6 @@
     [imageOperation start];
     self.currentImageOperation = imageOperation;
 }
-
-
 
 // md5 加密有两个好处啊，一是不暴露url 还有就是在存入disk的情况下如果有 / 的话会生成路劲失败
 - (NSString *)cachedFileNameForKey:(NSString *)key {
