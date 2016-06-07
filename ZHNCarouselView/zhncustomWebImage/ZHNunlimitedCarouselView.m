@@ -16,15 +16,16 @@
 @interface ZHNunlimitedCarouselView()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic , strong) UICollectionView *collectionView;
+@property (nonatomic , strong) UIImage * placeholderImage;
 @property (nonatomic , strong) UIPageControl *pageControl;
 @property (nonatomic , strong) NSArray *imageArray;
 @property (nonatomic , strong) NSTimer *timer;
 
-@property (nonatomic,assign) ZHN_contentMode imageContentMode;
-@property (nonatomic,assign) pageControlMode zhnPageControlMode;
-@property (nonatomic,assign) NSInteger timeIvatel;
-@property (nonatomic,copy) ZhnCarouselViewDidSelectItemBlock didSelecItemBlock;
-@property (nonatomic,strong) UIImage * placeholderImage;
+@property (nonatomic , assign) ZHN_contentMode imageContentMode;
+@property (nonatomic , assign) pageControlMode zhnPageControlMode;
+@property (nonatomic , assign) NSInteger timeIvatel;
+@property (nonatomic , copy) ZhnCarouselViewDidSelectItemBlock didSelecItemBlock;
+
 @end
 
 
