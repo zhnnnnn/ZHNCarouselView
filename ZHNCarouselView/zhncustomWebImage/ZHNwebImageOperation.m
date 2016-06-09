@@ -33,12 +33,12 @@
     if (self = [super init]) {
         
         NSURLSessionConfiguration * defaultConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        self.connection = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:self delegateQueue:[[ZHNimageDownLoader shareInstace] delegateQueue]];
-        self.downLoadTask = [self.connection downloadTaskWithRequest:request];
+        _connection = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:self delegateQueue:[[ZHNimageDownLoader shareInstace] delegateQueue]];
+        _downLoadTask = [self.connection downloadTaskWithRequest:request];
         
-        self.data = [NSMutableData data];
-        self.progressBlock = progress;
-        self.callbackOnFinished = completion;
+        _data = [NSMutableData data];
+        _progressBlock = progress;
+        _callbackOnFinished = completion;
         executing = NO;
         finished = NO;
         
