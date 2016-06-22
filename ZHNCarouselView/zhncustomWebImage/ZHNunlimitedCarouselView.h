@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger,pageControlMode){
     pageControlModeLeft,
     pageControlModeCenter,
     pageControlModeRight
+    
 };
 
 
@@ -25,6 +26,8 @@ typedef NS_ENUM(NSInteger,pageControlMode){
 @property (nonatomic,strong) UIColor * pageControlNormalColor;
 // pagecontrol的选中的颜色
 @property (nonatomic,strong) UIColor * pageControlSelectColor;
+// 系统默认的view 的 contentmode(你不需要我这些现实mode的情况下你可以用系统自带的mode)
+@property (nonatomic,assign) UIViewContentMode defaultZhnModeStatusViewMode;
 /**
  *  轮播图的实例方法
  *

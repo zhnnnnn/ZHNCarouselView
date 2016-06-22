@@ -23,6 +23,7 @@
 @property (nonatomic , assign) ZHN_contentMode imageContentMode;
 @property (nonatomic , assign) pageControlMode zhnPageControlMode;
 @property (nonatomic , assign) NSInteger timeIvatel;
+@property (nonatomic , assign) UIViewContentMode defaulViewMode;
 @property (nonatomic , copy) ZhnCarouselViewDidSelectItemBlock didSelecItemBlock;
 
 @end
@@ -110,7 +111,15 @@
     if (imageArray.count > 0) {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     }
-    
+}
+
+- (void)setDefaultZhnModeStatusViewMode:(UIViewContentMode)defaultZhnModeStatusViewMode{
+    _defaultZhnModeStatusViewMode = defaultZhnModeStatusViewMode;
+    [self setZhnPageControlMode:_zhnPageControlMode];
+    [self.collectionView reloadData];
+    if (_imageArray.count > 0) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }
 }
 
 #pragma mark 添加定时器
@@ -157,6 +166,10 @@
     
     
     ZHNunlimitedCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:zhnCell forIndexPath:indexPath];
+    cell.backImageView.clipsToBounds = YES;
+    if (_defaultZhnModeStatusViewMode) {
+        cell.backImageView.contentMode = _defaultZhnModeStatusViewMode;
+    }
     if ([self.imageArray[indexPath.row]isKindOfClass:[NSString class]]) {
         [cell.backImageView zhn_setImageWithUrl:self.imageArray[indexPath.row] withContentMode:self.imageContentMode placeHolder:self.placeholderImage];
     }else{

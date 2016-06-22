@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ZHNunlimitedCell : UICollectionViewCell
+
 @property (nonatomic,weak) UIImageView * backImageView;
+
+@property (nonatomic,weak) UILabel * noticeLabel;
+
 @end

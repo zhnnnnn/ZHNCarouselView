@@ -31,6 +31,13 @@
         self.backImageView = backImageView;
         self.backImageView.frame = self.bounds;
         backImageView.userInteractionEnabled = YES;
+        
+        
+        UILabel * noticeLabel = [[UILabel alloc]init];
+        [self addSubview:noticeLabel];
+        self.noticeLabel = noticeLabel;
+        
+        
     }
     return self;
 }

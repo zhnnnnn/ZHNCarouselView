@@ -65,7 +65,7 @@ static NSMutableDictionary * faildUrls;
     NSString * fullKey = [NSString stringWithFormat:@"%@%f%f%lu",[self cachedFileNameForKey:url],self.frame.size.width,self.frame.size.height,mode];
    
     if (mode == ZHN_contentModeDefault) {
-        fullKey = url;
+        fullKey = [self cachedFileNameForKey:url];
     }
     UIImage * currentImage = [[ZHNwebImageCache shareInstance]zhnWebImageCache_getImageWithKey:fullKey];
     if (currentImage) {
@@ -92,10 +92,10 @@ static NSMutableDictionary * faildUrls;
      
         // 需要默认的图片的情况
         if (needDefaultImage) {
-            [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:nil imageData:data key:url];
+            [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:nil imageData:data key:[self cachedFileNameForKey:url]];
         }
         if (mode == ZHN_contentModeDefault) { // 默认的显示
-             [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:nil imageData:data key:url];
+            [[ZHNwebImageCache shareInstance]zhnWebImageCache_setImage:[UIImage imageWithData:data] key:[self cachedFileNameForKey:url]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.image = [UIImage imageWithData:data];
             });
