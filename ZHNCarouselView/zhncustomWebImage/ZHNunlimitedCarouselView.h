@@ -37,15 +37,15 @@ typedef NS_ENUM(NSInteger,pageControlMode){
  */
 @property (nonatomic,assign) UIViewContentMode defaultZhnModeStatusViewMode;
 /**
- *  标题背景的颜色
+ *  标题背景的颜色(不设置颜色默认是没有颜色的)
  */
 @property (nonatomic,strong) UIColor * labelBackViewColor;
 /**
- *  标题背景的高度
+ *  标题背景的高度(默认的高度是40)
  */
 @property (nonatomic,assign) CGFloat labelBackViewHeight;
 /**
- *  提示的文字的数组(必须要设置label的frame才会有效果,label的位置是相对labelBackview的位置 labelBack的宽度是轮播图的宽度高度是可自定义的)
+ *  提示的文字的数组(必须要设置label的frame才会有效果,label的位置是相对labelBackview的位置 labelBack的宽度是轮播图的宽度高度是可自定义的,默认的高度是40)
  */
 @property (nonatomic,copy) NSArray * noticeLabelArray;
 /**

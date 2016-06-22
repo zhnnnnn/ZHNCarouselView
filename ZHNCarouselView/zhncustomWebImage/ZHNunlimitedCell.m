@@ -10,8 +10,6 @@
 
 @interface ZHNunlimitedCell()
 
-
-
 @end
 
 
@@ -20,6 +18,9 @@
 - (void)layoutSubviews{
     
     [super layoutSubviews];
+    
+    self.backImageView.frame = self.bounds;
+    self.labelBackView.frame = CGRectMake(0, self.frame.size.height - 40, self.frame.size.width, 40);
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -31,12 +32,10 @@
         self.backImageView = backImageView;
         self.backImageView.frame = self.bounds;
         backImageView.userInteractionEnabled = YES;
-        
+        backImageView.contentMode = UIViewContentModeScaleAspectFill;
         
         UIView * labeBackView = [[UIView alloc]init];
         [self addSubview:labeBackView];
-        labeBackView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-        labeBackView.frame = CGRectMake(0, self.frame.size.height - 40, self.frame.size.width, 40);
         self.labelBackView = labeBackView;
         
         UILabel * noticeLabel = [[UILabel alloc]init];
@@ -46,5 +45,7 @@
     }
     return self;
 }
+
+
 
 @end

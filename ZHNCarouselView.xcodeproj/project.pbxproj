@@ -22,6 +22,7 @@
 		CD033AF01CEEB10F009A5333 /* ZHNmemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE71CEEB10F009A5333 /* ZHNmemoryCache.m */; };
 		CD033AF11CEEB10F009A5333 /* ZHNwebImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AE91CEEB10F009A5333 /* ZHNwebImageCache.m */; };
 		CD033AF21CEEB10F009A5333 /* ZHNwebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD033AEB1CEEB10F009A5333 /* ZHNwebImageOperation.m */; };
+		CD35189F1D1A786A0053065D /* UIView+zhnAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CD35189D1D1A786A0053065D /* UIView+zhnAdd.m */; };
 		CDFD90C41CF4002D00B04B84 /* ZHNunlimitedCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFD90C31CF4002D00B04B84 /* ZHNunlimitedCarouselView.m */; };
 		CDFD90C71CF401D100B04B84 /* ZHNunlimitedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFD90C61CF401D100B04B84 /* ZHNunlimitedCell.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,8 @@
 		CD033AE91CEEB10F009A5333 /* ZHNwebImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNwebImageCache.m; sourceTree = "<group>"; };
 		CD033AEA1CEEB10F009A5333 /* ZHNwebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNwebImageOperation.h; sourceTree = "<group>"; };
 		CD033AEB1CEEB10F009A5333 /* ZHNwebImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNwebImageOperation.m; sourceTree = "<group>"; };
+		CD35189D1D1A786A0053065D /* UIView+zhnAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+zhnAdd.m"; sourceTree = "<group>"; };
+		CD35189E1D1A786A0053065D /* UIView+zhnAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+zhnAdd.h"; sourceTree = "<group>"; };
 		CDFD90C21CF4002D00B04B84 /* ZHNunlimitedCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNunlimitedCarouselView.h; sourceTree = "<group>"; };
 		CDFD90C31CF4002D00B04B84 /* ZHNunlimitedCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNunlimitedCarouselView.m; sourceTree = "<group>"; };
 		CDFD90C51CF401D100B04B84 /* ZHNunlimitedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNunlimitedCell.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */,
 				CD033AAF1CEEB0B1009A5333 /* ViewController.h */,
 				CD033AB01CEEB0B1009A5333 /* ViewController.m */,
+				CD35189D1D1A786A0053065D /* UIView+zhnAdd.m */,
+				CD35189E1D1A786A0053065D /* UIView+zhnAdd.h */,
 				CD033AB21CEEB0B1009A5333 /* Main.storyboard */,
 				CD033AB51CEEB0B1009A5333 /* Assets.xcassets */,
 				CD033AB71CEEB0B1009A5333 /* LaunchScreen.storyboard */,
@@ -324,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD35189F1D1A786A0053065D /* UIView+zhnAdd.m in Sources */,
 				CD033AF01CEEB10F009A5333 /* ZHNmemoryCache.m in Sources */,
 				CD033AEF1CEEB10F009A5333 /* ZHNimageDownLoader.m in Sources */,
 				CD033AB11CEEB0B1009A5333 /* ViewController.m in Sources */,

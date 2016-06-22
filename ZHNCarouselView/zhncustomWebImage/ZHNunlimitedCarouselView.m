@@ -5,7 +5,7 @@
 //  Created by zhn on 16/5/24.
 //  Copyright © 2016年 zhn. All rights reserved.
 //
-
+#import <objc/runtime.h>
 #import "ZHNunlimitedCarouselView.h"
 #import "ZHNunlimitedCell.h"
 #import "UIImageView+ZHNimageCache.h"
@@ -15,10 +15,11 @@
 
 @interface ZHNunlimitedCarouselView()<UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property (nonatomic , strong) UICollectionView *collectionView;
+@property (nonatomic , weak) UICollectionView *collectionView;
+@property (nonatomic , weak) UIPageControl *pageControl;
 @property (nonatomic , strong) UIImage * placeholderImage;
-@property (nonatomic , strong) UIPageControl *pageControl;
 @property (nonatomic , strong) NSTimer *timer;
+@property (nonatomic , strong) UICollectionViewFlowLayout * flowLayout;
 
 @property (nonatomic , assign) ZHN_contentMode imageContentMode;
 @property (nonatomic , assign) pageControlMode zhnPageControlMode;
@@ -45,9 +46,9 @@
    
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(frame.size.width, frame.size.height);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flowLayout.minimumLineSpacing = 0;
+    self.flowLayout = flowLayout;
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) collectionViewLayout:flowLayout];
     collectionView.delegate = self;
@@ -56,8 +57,8 @@
     collectionView.pagingEnabled = YES;
     collectionView.backgroundColor = [UIColor clearColor];
     [self addSubview:collectionView];
+    _collectionView = collectionView;
     
-    _collectionView=collectionView;
     
     UIPageControl * pageCtl = [[UIPageControl alloc]init];
     [self addSubview:pageCtl];
@@ -65,6 +66,33 @@
     self.pageControl.userInteractionEnabled = NO;
     
     [self.collectionView registerClass:[ZHNunlimitedCell class] forCellWithReuseIdentifier:zhnCell];
+}
+
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+
+    self.flowLayout.itemSize = self.bounds.size;
+    self.collectionView.frame = self.bounds;
+    if (_imageArray.count > 0 && self.pageControl.currentPage == 0) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    }
+
+    self.pageControl.numberOfPages = self.imageArray.count;
+    CGSize pageSize = [self.pageControl sizeForNumberOfPages:self.imageArray.count];
+    if (self.zhnPageControlMode == pageControlModeLeft) {
+        
+        self.pageControl.frame = CGRectMake(20, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
+        
+    }else if(self.zhnPageControlMode == pageControlModeRight){
+        
+        self.pageControl.frame = CGRectMake(self.frame.size.width - 20 - pageSize.width, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
+        
+    }else if(self.zhnPageControlMode == pageControlModeCenter){
+        
+        self.pageControl.frame = CGRectMake((self.frame.size.width - pageSize.width)/2, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
+        
+    }
 }
 
 - (void)setTimeIvatel:(NSInteger)timeIvatel{
@@ -83,26 +111,8 @@
     self.pageControl.currentPageIndicatorTintColor = pageControlSelectColor;
 }
 
-- (void)setZhnPageControlMode:(pageControlMode)zhnPageControlMode{
-    _zhnPageControlMode = zhnPageControlMode;
-    self.pageControl.numberOfPages = self.imageArray.count;
-    CGSize pageSize = [self.pageControl sizeForNumberOfPages:self.imageArray.count];
-    if (zhnPageControlMode == pageControlModeLeft) {
-        
-        self.pageControl.frame = CGRectMake(20, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
-        
-    }else if(zhnPageControlMode == pageControlModeRight){
-        
-        self.pageControl.frame = CGRectMake(self.frame.size.width - 20 - pageSize.width, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
-        
-    }else if(zhnPageControlMode == pageControlModeCenter){
-        
-        self.pageControl.frame = CGRectMake((self.frame.size.width - pageSize.width)/2, self.frame.size.height - pageSize.height, pageSize.width, pageSize.height);
-        
-    }
-}
-
 //====================== 属性的设置 ==========================//
+
 - (void)setImageArray:(NSArray *)imageArray{
     _imageArray = imageArray;
     [self setZhnPageControlMode:_zhnPageControlMode];
@@ -144,7 +154,7 @@
     
     [self.collectionView reloadData];
     if (_imageArray.count > 0) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
 }
 
@@ -190,7 +200,6 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     
     ZHNunlimitedCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:zhnCell forIndexPath:indexPath];
     cell.backImageView.clipsToBounds = YES;
