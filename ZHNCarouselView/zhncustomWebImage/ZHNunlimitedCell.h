@@ -14,4 +14,5 @@
 
 @property (nonatomic,weak) UILabel * noticeLabel;
 
+@property (nonatomic,weak) UIView * labelBackView;
 @end

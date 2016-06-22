@@ -20,14 +20,42 @@ typedef NS_ENUM(NSInteger,pageControlMode){
 
 
 @interface ZHNunlimitedCarouselView : UIView
-// 图片的数组
-@property (nonatomic , strong) NSArray *imageArray;
-// pagecontrol的普通颜色
+/**
+ *  图片的数组
+ */
+@property (nonatomic,strong) NSArray *imageArray;
+/**
+ *  pagectrol的普通颜色
+ */
 @property (nonatomic,strong) UIColor * pageControlNormalColor;
-// pagecontrol的选中的颜色
+/**
+ *  pagecontrol的选中的颜色
+ */
 @property (nonatomic,strong) UIColor * pageControlSelectColor;
-// 系统默认的view 的 contentmode(你不需要我这些现实mode的情况下你可以用系统自带的mode)
+/**
+ *  系统默认的view 的 contentmode(你不需要我这些现实mode的情况下你可以用系统自带的mode)
+ */
 @property (nonatomic,assign) UIViewContentMode defaultZhnModeStatusViewMode;
+/**
+ *  标题背景的颜色
+ */
+@property (nonatomic,strong) UIColor * labelBackViewColor;
+/**
+ *  标题背景的高度
+ */
+@property (nonatomic,assign) CGFloat labelBackViewHeight;
+/**
+ *  提示的文字的数组(必须要设置label的frame才会有效果,label的位置是相对labelBackview的位置 labelBack的宽度是轮播图的宽度高度是可自定义的)
+ */
+@property (nonatomic,copy) NSArray * noticeLabelArray;
+/**
+ *  提示文字的frame
+ */
+@property (nonatomic,assign) CGRect noticeLabelFrame;
+/**
+ *  label 字体的颜色
+ */
+@property (nonatomic,strong) UIColor * noticeLabelTextColor;
 /**
  *  轮播图的实例方法
  *

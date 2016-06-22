@@ -102,25 +102,52 @@
     }
 }
 
-
+//====================== 属性的设置 ==========================//
 - (void)setImageArray:(NSArray *)imageArray{
-    
     _imageArray = imageArray;
     [self setZhnPageControlMode:_zhnPageControlMode];
-    [self.collectionView reloadData];
-    if (imageArray.count > 0) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
-    }
+    [self P_zhnReloadData];
 }
 
 - (void)setDefaultZhnModeStatusViewMode:(UIViewContentMode)defaultZhnModeStatusViewMode{
     _defaultZhnModeStatusViewMode = defaultZhnModeStatusViewMode;
     [self setZhnPageControlMode:_zhnPageControlMode];
+    [self P_zhnReloadData];
+}
+
+- (void)setLabelBackViewColor:(UIColor *)labelBackViewColor{
+    _labelBackViewColor = labelBackViewColor;
+    [self P_zhnReloadData];
+}
+
+- (void)setLabelBackViewHeight:(CGFloat)labelBackViewHeight{
+    _labelBackViewHeight = labelBackViewHeight;
+    [self P_zhnReloadData];
+}
+
+- (void)setNoticeLabelArray:(NSArray *)noticeLabelArray{
+    _noticeLabelArray = noticeLabelArray;
+    [self P_zhnReloadData];
+}
+
+- (void)setNoticeLabelFrame:(CGRect)noticeLabelFrame{
+    _noticeLabelFrame = noticeLabelFrame;
+    [self P_zhnReloadData];
+}
+- (void)setNoticeLabelTextColor:(UIColor *)noticeLabelTextColor{
+    _noticeLabelTextColor = noticeLabelTextColor;
+    [self P_zhnReloadData];
+}
+
+//私有的刷新数据的方法
+- (void)P_zhnReloadData{
+    
     [self.collectionView reloadData];
     if (_imageArray.count > 0) {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     }
 }
+
 
 #pragma mark 添加定时器
 -(void) addTimer{
@@ -170,6 +197,23 @@
     if (_defaultZhnModeStatusViewMode) {
         cell.backImageView.contentMode = _defaultZhnModeStatusViewMode;
     }
+    if (_labelBackViewColor) {
+        cell.labelBackView.backgroundColor =_labelBackViewColor;
+    }
+    if (_labelBackViewHeight) {
+
+        cell.labelBackView.frame = CGRectMake(0, self.frame.size.height - _labelBackViewHeight, self.frame.size.width, _labelBackViewHeight);
+    }
+    if (_noticeLabelArray) {
+        cell.noticeLabel.text = _noticeLabelArray[indexPath.row];
+    }
+    if (_noticeLabelFrame.size.height > 0) {
+        cell.noticeLabel.frame = _noticeLabelFrame;
+    }
+    if (_noticeLabelTextColor) {
+        cell.noticeLabel.textColor = _noticeLabelTextColor;
+    }
+    
     if ([self.imageArray[indexPath.row]isKindOfClass:[NSString class]]) {
         [cell.backImageView zhn_setImageWithUrl:self.imageArray[indexPath.row] withContentMode:self.imageContentMode placeHolder:self.placeholderImage];
     }else{
