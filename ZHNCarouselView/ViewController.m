@@ -26,7 +26,7 @@
     testTableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
     
     
-    ZHNunlimitedCarouselView * temp = [ZHNunlimitedCarouselView zhn_instanceCarouselViewUseImageArray:@[] frame:CGRectMake(0, 0, self.view.frame.size.width, 200) placeHolder:[UIImage imageNamed:@"tutu"] imageContentMode:ZHN_contentModeDefault pageControlMode:pageControlModeRight timerTime:10 didSelectItemBlock:^(NSInteger index) {
+    ZHNunlimitedCarouselView * temp = [ZHNunlimitedCarouselView zhn_instanceCarouselViewUseImageArray:@[] frame:CGRectMake(0, 0, self.view.frame.size.width, 200) placeHolder:[UIImage imageNamed:@"tutu"] imageContentMode:ZHN_contentModeCenter pageControlMode:pageControlModeRight timerTime:10 didSelectItemBlock:^(NSInteger index) {
         NSLog(@"%ld",(long)index);
     }];
     
