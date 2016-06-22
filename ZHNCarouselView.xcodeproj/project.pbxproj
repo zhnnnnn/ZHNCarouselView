@@ -128,8 +128,7 @@
 		CD033AA81CEEB0B1009A5333 /* ZHNCarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				CD033ADD1CEEB10F009A5333 /* zhncustomWebImage */,
-				CD033ADC1CEEB0BD009A5333 /* ZHNCarouselView */,
+				CD033ADD1CEEB10F009A5333 /* ZHNCarouselView */,
 				CD033AAC1CEEB0B1009A5333 /* AppDelegate.h */,
 				CD033AAD1CEEB0B1009A5333 /* AppDelegate.m */,
 				CD033AAF1CEEB0B1009A5333 /* ViewController.h */,
@@ -169,14 +168,7 @@
 			path = ZHNCarouselViewUITests;
 			sourceTree = "<group>";
 		};
-		CD033ADC1CEEB0BD009A5333 /* ZHNCarouselView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ZHNCarouselView;
-			sourceTree = "<group>";
-		};
-		CD033ADD1CEEB10F009A5333 /* zhncustomWebImage */ = {
+		CD033ADD1CEEB10F009A5333 /* ZHNCarouselView */ = {
 			isa = PBXGroup;
 			children = (
 				CD033ADE1CEEB10F009A5333 /* UIImageView+ZHNimage.h */,
@@ -198,6 +190,7 @@
 				CDFD90C51CF401D100B04B84 /* ZHNunlimitedCell.h */,
 				CDFD90C61CF401D100B04B84 /* ZHNunlimitedCell.m */,
 			);
+			name = ZHNCarouselView;
 			path = zhncustomWebImage;
 			sourceTree = "<group>";
 		};

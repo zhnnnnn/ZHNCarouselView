@@ -18,7 +18,6 @@
 @property (nonatomic , strong) UICollectionView *collectionView;
 @property (nonatomic , strong) UIImage * placeholderImage;
 @property (nonatomic , strong) UIPageControl *pageControl;
-@property (nonatomic , strong) NSArray *imageArray;
 @property (nonatomic , strong) NSTimer *timer;
 
 @property (nonatomic , assign) ZHN_contentMode imageContentMode;
@@ -106,7 +105,12 @@
 - (void)setImageArray:(NSArray *)imageArray{
     
     _imageArray = imageArray;
-     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    [self setZhnPageControlMode:_zhnPageControlMode];
+    [self.collectionView reloadData];
+    if (imageArray.count > 0) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:zhnMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }
+    
 }
 
 #pragma mark 添加定时器
@@ -153,7 +157,12 @@
     
     
     ZHNunlimitedCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:zhnCell forIndexPath:indexPath];
-    [cell.backImageView zhn_setImageWithUrl:self.imageArray[indexPath.row] withContentMode:self.imageContentMode placeHolder:self.placeholderImage];
+    if ([self.imageArray[indexPath.row]isKindOfClass:[NSString class]]) {
+        [cell.backImageView zhn_setImageWithUrl:self.imageArray[indexPath.row] withContentMode:self.imageContentMode placeHolder:self.placeholderImage];
+    }else{
+        [cell.backImageView zhn_setContentMode:self.imageContentMode withImage:self.imageArray[indexPath.row] frame:cell.backImageView.frame];
+    }
+    
     return cell;
 }
 

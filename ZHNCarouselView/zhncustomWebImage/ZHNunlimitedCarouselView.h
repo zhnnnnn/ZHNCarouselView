@@ -19,7 +19,8 @@ typedef NS_ENUM(NSInteger,pageControlMode){
 
 
 @interface ZHNunlimitedCarouselView : UIView
-
+// 图片的数组
+@property (nonatomic , strong) NSArray *imageArray;
 // pagecontrol的普通颜色
 @property (nonatomic,strong) UIColor * pageControlNormalColor;
 // pagecontrol的选中的颜色
