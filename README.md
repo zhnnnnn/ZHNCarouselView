@@ -22,7 +22,7 @@
 ###### 1.引入工程
 <1 下载下工程吧`ZHNunlimitedCarouselView`整个文件夹导入进去
 
-<2 或者你可以cocoapods     pod 'ZHNunlimitedCarouselView', '~> 1.0.0'
+<2 或者你可以cocoapods     `pod 'ZHNunlimitedCarouselView', '~> 1.0.0'`
 ###### 2.具体使用步骤
 提供了一个全能初始化方法 
 ```
